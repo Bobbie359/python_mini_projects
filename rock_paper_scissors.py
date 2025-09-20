@@ -3,6 +3,8 @@ import random
 rock = "Rock"
 paper = "Paper"
 scissors = "Scissors"
+player_score = 0
+computer_score = 0
 
 player_move = input("Choose [r]ock, [p]aper, [s]cissors: ")
 
@@ -28,7 +30,9 @@ else:
 print(f"Player move: {player_move}")
 print(f"Computer move: {computer_move}")
 
-if (player_move == rock and computer_move == scissors) or (player_move == paper and computer_move == rock) or (player_move == scissors and computer_move == paper):
+if ((player_move == rock and computer_move == scissors) or
+        (player_move == paper and computer_move == rock) or
+        (player_move == scissors and computer_move == paper)):
     print("You win!")
 elif player_move == computer_move:
     print("Draw!")
